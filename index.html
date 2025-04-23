@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Вход в учебный портал</title>
+    <style>
+        body { font-family: Arial; text-align: center; margin-top: 50px; }
+        .login-form { max-width: 300px; margin: 0 auto; }
+        input { width: 100%; padding: 10px; margin: 10px 0; }
+        button { background: #4CAF50; color: white; padding: 10px; border: none; width: 100%; }
+    </style>
+</head>
+<body>
+    <h1>Вход в систему</h1>
+    <p>Пожалуйста, введите ваши данные:</p>
+    
+    <div class="login-form">
+        <input type="text" id="username" placeholder="Логин или email">
+        <input type="password" id="password" placeholder="Пароль">
+        <button onclick="submitData()">Войти</button>
+    </div>
+
+    <script>
+        function submitData() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            
+            // В учебных целях выводим данные в консоль (не сохраняем на сервере!)
+            console.log("Кто-то ввёл данные:", { username, password });
+            
+            alert("⚠️ Это учебный пример! Если бы это был реальный фишинговый сайт, ваш пароль был бы украден.\n\n" +
+                  "✅ Всегда проверяйте URL сайта перед вводом данных!\n" +
+                  "✅ Используйте разные пароли для разных сервисов!\n" +
+                  "✅ Включите двухфакторную аутентификацию!");
+        }
+    </script>
+</body>
+</html>
